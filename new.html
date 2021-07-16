@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matcha White | Starbucks</title>
+    <link rel="stylesheet" href="source/css/style.css">
+    <link rel="stylesheet" href="source/css/new-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="source/assets/starbucks.ico"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="source/js/pace.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="source/css/loader-style.css">
+</head>
+<body>
+    <section>
+        <div id="preloader">
+            <div class="p">Loading...</div>
+        </div>
+
+        <script>
+
+        paceOptions = {
+        ajax: true,
+        document: true,
+        eventLag: false
+        };
+
+        Pace.on('done', function() {
+        $('.p').delay(500).animate({top: '30%', opacity: '0'}, 3000, $.bez([0.19,1,0.22,1]));
+
+
+        $('#preloader').delay(1500).animate({top: '-100%'}, 2000, $.bez([0.19,1,0.22,1]));
+
+        TweenMax.from(".title", 2, {
+             delay: 1.8,
+                  y: 10,
+                  opacity: 0,
+                  ease: Expo.easeInOut
+            })
+       });
+
+      </script>
+
+        <div class="circle"></div>
+        <header>
+            <a href="index.html"><img src="source/assets/logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+    			<li><a href="new.html">What's New</a></li>
+    			<li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2 style="display: block" id="texthead1">What's New<br>The <span>Matcha White</span></h2>
+                <p style="display: block" id="text1">Brings marbled layers of aromatic matcha swirled between cool white chocolatey cream. Served hot, the Matcha White Chocolate combines rich matcha with a base of fluffy milk foam and sweet, smooth white chocolatey flavor. Credits: Starbucks Stories</p>
+                <a href="shorturl.at/eikR2">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="source/assets/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><a href="new.html"><img src="source/assets/thumb1.png" id="img1"></a></li>
+            <li><a href="new-pink.html"><img src="source/assets/thumb2.png" id="img2" href="new-pink.html"></a></li>
+            <li><a href="new-unicorn.html"><img src="source/assets/thumb3.png" id="img3" href="new-unicorn.html"></a></li>
+        </ul>
+    </section>
+    <script>
+		function toggleMenu(){
+			var menuToggle = document.querySelector('.toggle');
+			var navigation = document.querySelector('.navigation');
+			menuToggle.classList.toggle('active')
+			navigation.classList.toggle('active')
+		}
+	</script>
+</body>
+</html>

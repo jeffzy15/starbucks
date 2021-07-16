@@ -1,0 +1,751 @@
+section{
+	position: relative;
+	padding: 100px;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #A9A9A9;
+}
+
+.content{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content .textBox {
+	position: relative;
+	max-width: 600px;
+}
+
+.content .textBox h2{
+	color: #333;
+	font-size: 4em;
+	line-height: 1.4em;
+	font-weight: 500;
+}
+
+.content .textBox h2 span{
+	color: #017143;
+	font-size: 0.9em;
+	font-weight: 900;
+}
+
+.content .textBox p{
+	color: #333;
+	font-size: 18px;
+}
+
+.content .textBox a{
+	display: inline-block;
+	margin-top: 20px;
+	padding: 8px 20px;
+	background: #017143;
+	color: #fff;
+	border-radius: 40px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+	transition: 0.8s ease;
+}
+
+.content #textBox1 {
+	position: relative;
+	max-width: 600px;
+}
+
+.content #textBox1 h2{
+	color: #333;
+	text-align: left;
+	font-size: 4em;
+	line-height: 1.4em;
+	font-weight: 500;
+}
+
+.content #textBox1 h2 span{
+	color: #017143;
+	font-size: 0.9em;
+	font-weight: 900;
+}
+
+.content #textBox1 p{
+	color: #333;
+	font-size: 18px;
+}
+
+.content #textBox1 a{
+	display: inline-block;
+	margin-top: 20px;
+	padding: 8px 20px;
+	background: #017143;
+	color: #fff;
+	border-radius: 40px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+	transition: 0.8s ease;
+}
+
+.content #textBox2 {
+	position: relative;
+	max-width: 600px;
+}
+
+.content #textBox2 h2{
+	color: #333;
+	text-align: left;
+	font-size: 4em;
+	line-height: 1.4em;
+	font-weight: 500;
+}
+
+.content #textBox2 h2 span{
+	color: #017143;
+	font-size: 0.9em;
+	font-weight: 900;
+}
+
+.content #textBox2 p{
+	color: #333;
+	font-size: 18px;
+}
+
+.content #textBox2 a{
+	display: inline-block;
+	margin-top: 20px;
+	padding: 8px 20px;
+	background: #017143;
+	color: #fff;
+	border-radius: 40px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+	transition: 0.8s ease;
+}
+
+.content .imgBox{
+	width: 600px;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 50px;
+	margin-top: 50px;
+}
+
+.content .imgBox .starbucks{
+	max-width: 340px;
+	transition: 0.5s ease;
+}
+
+.starbucks:hover{
+	transform: translateY(-15px);
+}
+
+.thumb{
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	transform: translateX(-50%);
+	display: flex;
+}
+
+.thumb li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	cursor: pointer;
+	transition: 0.5s ease;
+}
+
+.thumb li:hover{
+	transform: translateY(-15px);
+}
+
+.thumb li img{
+	max-width: 60px;
+}
+
+.circle{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #017143;
+	clip-path: circle(600px at right 800px);
+}
+
+.content .textBox a:hover{
+	background-color: #000
+}
+
+.content #textBox1 a:hover{
+	background-color: #000
+}
+
+.content #textBox2 a:hover{
+	background-color: #000
+}
+
+.circle1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #eb7495;
+	clip-path: circle(600px at right 800px);
+}
+
+.circle2{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #d752b1;
+	clip-path: circle(600px at right 800px);
+}
+
+@media (max-width: 991px){
+	header{
+		padding: 20px;
+	}
+
+	header .logo{
+		max-width: 60px;
+	}
+
+	header ul{
+		display: none;
+	}
+
+	header ul li a{
+		font-size: 1.5em;
+		margin: 15px 0;
+	}
+
+	.content .imgBox .starbucks{
+		max-width: 500px;
+		justify-content: center;
+		height: auto;
+		transition: 0.5s ease;
+	}
+
+	.toggle{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		background-size: 30px;
+		background: url(../assets/menu.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		filter: invert(1);
+		z-index: 11;
+	}
+
+	.toggle.active{
+		position: fixed;
+		right: 20px;
+		background: url(../assets/close.png);
+		background-size: 25px;
+		background-position: center;
+		background-repeat: no-repeat;
+		filter: invert(1);
+	}
+
+	header ul.navigation.active{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background: #a9a9a9;
+		z-index: 10;
+	}
+
+	section{
+		padding: 20px 20px 120px;
+	}
+
+	.content{
+		flex-direction: column;
+		margin-top: 100px;
+	}
+
+	.content .textbox h2{
+		font-size: 2.5rem;
+		margin-bottom: 15px;
+	}
+
+	.content .textbox{
+		max-width: 100%;
+	}
+
+	.content .imgBox{
+		max-width: 100%;
+		justify-content: center;
+	}
+
+	.content .imgBox img{
+		width: 300px;
+		margin-left: 20px;
+	}
+
+	.thumb li img{
+		max-width: 50px;
+	}
+
+	.circle{
+		clip-path: circle(500px at center bottom);
+	}
+
+	.sci{
+		background: #017143;
+		right: 0;
+		width: 50px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+}
+
+@media (max-width: 580px){
+	.content .imgBox .starbucks{
+		max-width: 500px;
+		margin-left: -20px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+
+	.circle{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+@media (max-width: 430px){
+	.content .imgBox .starbucks{
+		max-width: 500px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+
+	.circle{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+@media (max-width: 870px){
+	.content .imgBox .starbucks{
+		max-width: 700px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+	.circle{
+		clip-path: circle(500px at center bottom);
+	}
+}
+
+@media (max-width: 500px){
+	.content .imgBox .starbucks{
+		max-width: 450px;
+		margin-left: -20px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+	.circle{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+@media (max-width: 550px){
+	.content .imgBox .starbucks{
+		max-width: 400px;
+		margin-left: -20px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+	.circle{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+
+@media (max-width: 575px){
+	.content .imgBox .starbucks{
+		max-width: 475px;
+		margin-left: -20px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+	.circle{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+@media (max-width: 991px){
+	header{
+		padding: 20px;
+	}
+
+	header .logo{
+		max-width: 60px;
+	}
+
+	header ul{
+		display: none;
+	}
+
+	header ul li a{
+		font-size: 1.5em;
+		margin: 15px 0;
+	}
+
+	.content .imgBox .starbucks{
+		max-width: 500px;
+		justify-content: center;
+		height: auto;
+		transition: 0.5s ease;
+	}
+
+	.toggle{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		background-size: 30px;
+		background: url(../assets/menu.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		filter: invert(1);
+		z-index: 11;
+	}
+
+	.toggle.active{
+		position: fixed;
+		right: 20px;
+		background: url(../assets/close.png);
+		background-size: 25px;
+		background-position: center;
+		background-repeat: no-repeat;
+		filter: invert(1);
+	}
+
+	header ul.navigation.active{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background: #a9a9a9;
+		z-index: 10;
+	}
+
+	section{
+		padding: 20px 20px 120px;
+	}
+
+	.content{
+		flex-direction: column;
+		margin-top: 100px;
+	}
+
+	.content #textbox1 h2{
+		font-size: 2.5rem;
+		margin-bottom: 15px;
+	}
+
+	.content #textbox1{
+		max-width: 100%;
+	}
+
+	.content .imgBox{
+		max-width: 100%;
+		justify-content: center;
+	}
+
+	.content .imgBox img{
+		width: 300px;
+		margin-left: 20px;
+	}
+
+	.thumb li img{
+		max-width: 50px;
+	}
+
+	.circle1{
+		clip-path: circle(500px at center bottom);
+	}
+
+	.sci{
+		background: #017143;
+		right: 0;
+		width: 50px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+}
+
+@media (max-width: 580px){
+	.content .imgBox .starbucks{
+		max-width: 500px;
+		margin-left: -20px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+
+	.circle1{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+@media (max-width: 430px){
+	.content .imgBox .starbucks{
+		max-width: 500px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+
+	.circle1{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+@media (max-width: 870px){
+	.content .imgBox .starbucks{
+		max-width: 700px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+	.circle1{
+		clip-path: circle(500px at center bottom);
+	}
+}
+
+@media (max-width: 500px){
+	.content .imgBox .starbucks{
+		max-width: 450px;
+		margin-left: -20px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+	.circle1{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+@media (max-width: 550px){
+	.content .imgBox .starbucks{
+		max-width: 400px;
+		margin-left: -20px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+	.circle1{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+
+@media (max-width: 575px){
+	.content .imgBox .starbucks{
+		max-width: 475px;
+		margin-left: -20px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+	.circle1{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+@media (max-width: 991px){
+	header{
+		padding: 20px;
+	}
+
+	header .logo{
+		max-width: 60px;
+	}
+
+	header ul{
+		display: none;
+	}
+
+	header ul li a{
+		font-size: 1.5em;
+		margin: 15px 0;
+	}
+
+	.content .imgBox .starbucks{
+		max-width: 500px;
+		justify-content: center;
+		height: auto;
+		transition: 0.5s ease;
+	}
+
+	.toggle{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		background-size: 30px;
+		background: url(../assets/menu.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		filter: invert(1);
+		z-index: 11;
+	}
+
+	.toggle.active{
+		position: fixed;
+		right: 20px;
+		background: url(../assets/close.png);
+		background-size: 25px;
+		background-position: center;
+		background-repeat: no-repeat;
+		filter: invert(1);
+	}
+
+	header ul.navigation.active{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background: #a9a9a9;
+		z-index: 10;
+	}
+
+	section{
+		padding: 20px 20px 120px;
+	}
+
+	.content{
+		flex-direction: column;
+		margin-top: 100px;
+	}
+
+	.content #textbox2 h2{
+		font-size: 2.5rem;
+		margin-bottom: 15px;
+	}
+
+	.content #textbox2{
+		max-width: 100%;
+	}
+
+	.content .imgBox{
+		max-width: 100%;
+		justify-content: center;
+	}
+
+	.content .imgBox img{
+		width: 325px;
+		margin-left: 20px;
+	}
+
+	.thumb li img{
+		max-width: 50px;
+	}
+
+	.circle2{
+		clip-path: circle(500px at center bottom);
+	}
+
+	.sci{
+		background: #017143;
+		right: 0;
+		width: 50px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+}
+
+@media (max-width: 580px){
+	.content .imgBox .starbucks{
+		width: 300px;
+		margin-left: -20px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+
+	.circle2{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+@media (max-width: 430px){
+	.content .imgBox .starbucks{
+		width: 300px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+
+	.circle2{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+@media (max-width: 870px){
+	.content .imgBox .starbucks{
+		max-width: 700px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+	.circle2{
+		clip-path: circle(500px at center bottom);
+	}
+}
+
+@media (max-width: 500px){
+	.content .imgBox .starbucks{
+		max-width: 450px;
+		margin-left: -20px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+	.circle2{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+@media (max-width: 550px){
+	.content .imgBox .starbucks{
+		max-width: 400px;
+		margin-left: -20px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+	.circle2{
+		clip-path: circle(400px at center bottom);
+	}
+}
+
+
+@media (max-width: 575px){
+	.content .imgBox .starbucks{
+		max-width: 475px;
+		margin-left: -20px;
+		height: auto;
+		transition: 0.5s ease;
+	}
+	.circle2{
+		clip-path: circle(400px at center bottom);
+	}
+}
